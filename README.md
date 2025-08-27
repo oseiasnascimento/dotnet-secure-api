@@ -13,16 +13,21 @@ Esta aplicação é uma API desenvolvida em .NET 8 para gerenciamento de contas 
 
 ## Endpoints da API
 
-| Método | Rota            | Descrição                  |
-| ------ | --------------- | -------------------------- |
-| POST   | /api/auth/login | Autenticação de usuário    |
-| POST   | /api/users      | Cadastro de novo usuário   |
-| GET    | /api/users      | Listar usuários            |
-| GET    | /api/users/{id} | Buscar usuário por ID      |
-| PUT    | /api/users/{id} | Atualizar dados do usuário |
-| DELETE | /api/users/{id} | Remover usuário            |
-| GET    | /api/roles      | Listar roles/permissões    |
-| POST   | /api/roles      | Criar nova role/permissão  |
+| Método | Rota                          | Descrição                        |
+| ------ | ----------------------------- | -------------------------------- |
+| GET    | /usuarios/me                  | Dados do usuário autenticado     |
+| GET    | /usuarios                     | Listar usuários                  |
+| GET    | /usuarios/buscar              | Buscar usuários                  |
+| POST   | /usuarios/auth                | Autenticação de usuário          |
+| POST   | /usuarios/cadastro            | Cadastro de novo usuário         |
+| PUT    | /usuarios/{userId}            | Atualizar dados do usuário       |
+| PUT    | /usuarios/{userId}/cargos     | Atualizar cargos do usuário      |
+| PUT    | /usuarios/{userId}/status     | Alterar status do usuário        |
+| POST   | /usuarios/refresh             | Gerar novo token de autenticação |
+| POST   | /usuarios/revogar             | Revogar token                    |
+| POST   | /usuarios/esqueci-minha-senha | Solicitar recuperação de senha   |
+| POST   | /usuarios/recuperar-senha     | Recuperar senha                  |
+| POST   | /usuarios/alterar-senha       | Alterar senha                    |
 
 ## Tabelas do Banco de Dados
 
