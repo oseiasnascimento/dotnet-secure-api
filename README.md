@@ -51,10 +51,34 @@ Esta aplicação é uma API desenvolvida em .NET 8 para gerenciamento de contas 
 
 ## Instalação
 
-1. Clone o repositório: git clone <url-do-repositorio>
-2. Restaure os pacotes: dotnet restore
+1. Clone o repositório: `git clone <url-do-repositorio>`
+2. Restaure os pacotes: `dotnet restore`
 3. Configure o banco de dados em `WebApi/appsettings.json`.
-4. Execute as migrações e o seed: dotnet run --project WebApi
+4. Execute as migrações e o seed: `dotnet run --project WebApi`
+
+## Utilizando Docker Compose
+
+Para subir o ambiente completo com banco de dados e API, utilize:
+
+```sh
+docker compose up -d
+```
+
+Isso irá criar os containers necessários e inicializar o banco de dados conforme definido no arquivo `docker-compose.yml`.
+
+## Executando Migrations
+
+Para aplicar as migrations do Entity Framework Core, utilize:
+
+```sh
+dotnet ef database update --project Infrastructure
+```
+
+Ou, se estiver usando Docker, execute o comando dentro do container da aplicação:
+
+```sh
+docker exec -it <nome-do-container-api> dotnet ef database update --project Infrastructure
+```
 
 ## Uso
 
