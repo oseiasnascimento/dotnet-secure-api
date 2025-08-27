@@ -11,6 +11,27 @@ Esta aplicação é uma API desenvolvida em .NET 8 para gerenciamento de contas 
 - Seed de usuários e roles padrão
 - Configuração flexível via arquivos `appsettings`
 
+## Endpoints da API
+
+| Método | Rota            | Descrição                  |
+| ------ | --------------- | -------------------------- |
+| POST   | /api/auth/login | Autenticação de usuário    |
+| POST   | /api/users      | Cadastro de novo usuário   |
+| GET    | /api/users      | Listar usuários            |
+| GET    | /api/users/{id} | Buscar usuário por ID      |
+| PUT    | /api/users/{id} | Atualizar dados do usuário |
+| DELETE | /api/users/{id} | Remover usuário            |
+| GET    | /api/roles      | Listar roles/permissões    |
+| POST   | /api/roles      | Criar nova role/permissão  |
+
+## Tabelas do Banco de Dados
+
+| Tabela    | Campos Principais                                   |
+| --------- | --------------------------------------------------- |
+| Users     | Id, UserName, Email, PasswordHash, RoleId, IsActive |
+| Roles     | Id, Name, Description                               |
+| UserRoles | UserId, RoleId                                      |
+
 ## Estrutura do Projeto
 
 - **Domain**: Entidades e regras de negócio
