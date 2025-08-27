@@ -2,6 +2,22 @@
 
 Esta aplicação é uma API desenvolvida em .NET 8 para gerenciamento de contas de usuários, autenticação e autorização. Ela utiliza arquitetura em camadas (Domain, Application, Infrastructure, WebApi) e segue boas práticas de desenvolvimento.
 
+## Tecnologias
+
+Este projeto utiliza as seguintes tecnologias:
+
+- **.NET 8**: Framework principal para desenvolvimento da API
+- **Entity Framework Core**: ORM para acesso e manipulação do banco de dados
+- **SQL Server**: Banco de dados relacional (pode ser alterado conforme configuração)
+- **Docker & Docker Compose**: Containerização da aplicação e do banco de dados
+- **Swagger**: Documentação e teste dos endpoints da API
+- **JWT (JSON Web Token)**: Autenticação e autorização
+- **AutoMapper**: Mapeamento de objetos entre camadas
+- **FluentValidation**: Validação de dados
+- **Serilog**: Logging estruturado
+- **xUnit**: Testes unitários
+- **Postman**: Testes manuais dos endpoints (opcional)
+
 ## Funcionalidades
 
 - Cadastro de usuários
