@@ -1,0 +1,32 @@
+services:
+  secure-api:
+  # image: abremtechnology/navega-ma-backend:1.0
+    container_name: dotnet-secure-api
+    build:
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Homolog
+    ports:
+      - "5001:8080"
+    depends_on:
+      - mssql-server
+
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    user: root
+    volumes:
+      - mssqlserver_data:/var/opt/mssql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Testing123!
+    ports:
+      - "1433:1433"
+
+volumes:
+  mssqlserver_data:
+    driver: local
+
+# networks:
+#   default:
+#     external:
+#       name: local-network
