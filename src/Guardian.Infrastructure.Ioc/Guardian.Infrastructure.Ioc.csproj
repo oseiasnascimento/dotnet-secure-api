@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Guardian.Application\Guardian.Application.csproj" />
+    <ProjectReference Include="..\Guardian.Infrastructure.Data\Guardian.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Guardian.Infrastructure.Identity\Guardian.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\Guardian.Infrastructure.Shared\Guardian.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
