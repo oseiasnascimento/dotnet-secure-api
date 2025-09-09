@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="MailKit" Version="4.9.0" />
+	  <PackageReference Include="MimeKit" Version="4.9.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Guardian.Application\Guardian.Application.csproj" />
+    <ProjectReference Include="..\Guardian.Application\Guardian.Application.csproj" />
+  </ItemGroup>
+
+</Project>
