@@ -72,8 +72,8 @@ namespace Infrastructure.Identity
                         return Task.CompletedTask;
                     },
 
-                    // Isco => removido pois estava dando erro geral na aplicação, foi implementado um Middleware para tratamento
-                    //         de erros internos em: NavegaMA.WebApi/Middlewares/ErrorHandlerMiddleware.cs
+                    // removido pois estava dando erro geral na aplicação, foi implementado um Middleware para tratamento
+                    // de erros internos em: Guardian.WebApi/Middlewares/InternalErrorMiddleware.cs
 
                     //OnAuthenticationFailed = context =>
                     //{
